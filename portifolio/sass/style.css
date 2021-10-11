@@ -11967,6 +11967,23 @@ body {
   background: linear-gradient(90deg, black 3%, #b05f33 21%, rgba(249, 117, 2, 0.804359) 43%, rgba(255, 175, 0, 0.823967) 76%, rgba(254, 0, 0, 0.83237) 100%);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(20%, #f89500), color-stop(82%, rgba(248, 0, 0, 0.984)));
+  background: linear-gradient(0deg, black 0%, #f89500 20%, rgba(248, 0, 0, 0.984) 82%);
+  border-radius: 16px;
+}
+
 .collapse > .navbar-nav > .nav-item a {
   color: #fff;
 }
@@ -11982,6 +11999,68 @@ main {
 
 .carousel-inner > .carousel-item img {
   width: 20%;
-  height: 200px;
+  height: 210px;
+}
+
+section {
+  padding: 50px;
+}
+
+.container > .row > .caricatura {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+}
+
+.caricaturaImg {
+  max-width: 25vw;
+  border-radius: 50%;
+  height: 25vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid;
+  border-color: #ff7a0d;
+}
+
+.container > .row .col-6 {
+  border: 4px solid;
+  -o-border-image: linear-gradient(227.91deg, #fe0000 0%, #ffaf00 100%) 1;
+     border-image: linear-gradient(227.91deg, #fe0000 0%, #ffaf00 100%) 1;
+  padding: 1px;
+}
+
+.container > .row .invert {
+  border: 4px solid;
+  -o-border-image: linear-gradient(227.91deg, #ffaf00 0%, #fe0000 100%) 1;
+     border-image: linear-gradient(227.91deg, #ffaf00 0%, #fe0000 100%) 1;
+  padding: 1px;
+}
+
+.container > .row > .col-6 .p-3 {
+  background: #000;
+  color: #fff;
+}
+
+.container > .row > .invert .p-3 {
+  background: #000;
+  color: #fff;
+}
+
+.container > .row > .invert > .p-3 .link {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdf900), color-stop(red), to(#fd6500));
+  background-image: linear-gradient(to bottom, #fdf900, red, #fd6500);
+  color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* Adicionado: */
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

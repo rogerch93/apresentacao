@@ -13,6 +13,22 @@ body{
    background: $themeNav-bg;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(248, 149, 0) 20%, rgba(248, 0, 0, 0.984) 82%);
+    border-radius: 16px;
+}
+
 .collapse > .navbar-nav > .nav-item a{
     color:$letra-color
 }
@@ -20,11 +36,69 @@ body{
 main{
     padding:50px;
 }
+
 .titulo{
     text-align: center;
     padding: 50px;
 }
+
 .carousel-inner > .carousel-item img{
     width: 20%;
-    height: 200px;
+    height: 210px;
+}
+
+section{
+    padding:50px;
+}
+
+.container > .row > .caricatura{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    padding-bottom: 20px;
+}
+.caricaturaImg{
+    max-width: 25vw;
+    border-radius: 50%;
+    height: 25vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid;
+    border-color: rgb(255, 122, 13);
+}
+
+.container > .row .col-6{
+    border: 4px solid;
+    border-image: linear-gradient(227.91deg, #fe0000 0%, #ffaf00 100%) 1;
+    padding: 1px;
+    
+}
+
+.container > .row .invert{
+    border: 4px solid;
+    border-image: linear-gradient(227.91deg, #ffaf00 0%, #fe0000 100%) 1;
+    padding: 1px;
+    
+}
+
+.container > .row > .col-6 .p-3{
+    background: #000;
+    color: #fff;
+
+}
+
+.container > .row > .invert .p-3{
+    background: #000;
+    color: #fff;
+}
+
+.container > .row > .invert > .p-3 .link{
+    background-image: linear-gradient(to bottom, rgb(253, 249, 0), rgb(255, 0, 0), rgb(253, 101, 0));
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+    /* Adicionado: */
+    -webkit-text-fill-color: transparent;
 }
