@@ -11958,7 +11958,7 @@ fieldset:disabled .btn {
 }
 
 body {
-  background-color: black;
+  background: black;
 }
 
 .navbar, .dropdown-menu {
@@ -12044,23 +12044,60 @@ section {
   padding: 1px;
 }
 
-.container > .row > .col-6 .p-3 {
-  background: #000;
+.container > .row > .col-6 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container > .row > .invert {
   color: #fff;
 }
 
-.container > .row > .invert .p-3 {
-  background: #000;
-  color: #fff;
-}
-
-.container > .row > .invert > .p-3 .link {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdf900), color-stop(red), to(#fd6500));
-  background-image: linear-gradient(to bottom, #fdf900, red, #fd6500);
+.row .progress-bar {
   color: black;
-  background-clip: text;
-  -webkit-background-clip: text;
-  /* Adicionado: */
-  -webkit-text-fill-color: transparent;
+}
+
+.container > .row > .p-3 > ul .list-group-item {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  margin-right: 5.5%;
+}
+
+.p-3 > ul > .list-group-item img {
+  height: 45px;
+}
+
+.html {
+  background: #51ff00;
+  color: black;
+}
+
+.boot {
+  background: #cc00ff;
+  color: black;
+}
+
+.css3 {
+  background: #556ae0;
+  color: black;
+}
+
+.js {
+  background: #fffb00;
+  color: black;
+}
+
+.cs {
+  background: #660b6e;
+  color: black;
+}
+
+.sql {
+  background: red;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
