@@ -6,16 +6,15 @@ $invert-bg: linear-gradient(90deg, rgba(254,0,0,0.8323704481792717) 3%, rgba(255
 $letra-color: #fff;
 $fire-bg1:rgb(213,25,25);
 $fire-bg2:linear-gradient(0deg, rgba(213,25,25,0.8435749299719888) 2%, rgba(245,134,11,0.6867121848739496) 8%, rgba(239,133,3,0.7595413165266106) 11%, rgba(0,0,0,0.9416141456582633) 20%);
-$html:rgb(81, 255, 0);
+$html:rgb(255, 123, 0);
 $boot:rgb(204, 0, 255);
-$css:rgb(85, 106, 224);
+$css:rgb(36, 64, 226);
 $js:rgb(255, 251, 0);
-$cs:rgb(102, 11, 110);
+$cs:rgb(96, 90, 97);
 $sql:rgb(255, 0, 0);
 
 body{
-   background: $fire-bg1;
-   background: $fire-bg2;
+    background: $theme-bg;
 }
 
 .navbar{
@@ -116,20 +115,20 @@ section{
     place-items: center;
 }
 
-ul{
-    margin-right: 5.5%;
-}
 
-.p-3 > ul > .list-group-item img{
-    height: 45px;
-   
-}
 .painel{
     padding: 10px;
     text-align: center;
 }
-.list-group-item{
-    background: #ccc;
+
+.lista{
+    text-align-last: justify;
+}
+
+#exp > .list-group-item {
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    justify-content: center;
 }
 
 .html{
@@ -157,30 +156,6 @@ ul{
     color: $theme-bg;
 }
 
-.html1{
-    color:$html;
-}
-
-.boot1{
-    color:$boot;
-}
-
-.css31{
-    color:$css;
-}
-
-.js1{
-    color:$js;
-}
-
-.cs1{
-    color:$cs;
-}
-
-.sql1{
-    color:$sql;
-}
-
 footer{
     background: $invert-bg;
     padding:10px;
@@ -190,51 +165,43 @@ footer{
     height:40px;
 }
 
+.aviso{
+    text-align: center;
+    padding: 30px;
+}
+
 //Animação
-.fires{
-    position: relative;
-    width:3px;
-    height:3px;
-    border-radius:50%;
-    box-shadow: 50px 30px rgb(255, 122, 13),
-    100px 80px rgb(255, 122, 13),
-    80px 120px rgb(255, 122, 13),
-    300px 20px rgb(255, 122, 13),
-    250px 130px rgb(255, 122, 13),
-    200px 50px rgb(255, 122, 13),
-    150px 100px rgb(255, 122, 13),
-    320px 100px rgb(255, 122, 13);
-    animation: anim-fire 20s linear infinite;
+.pulse{
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse ;
 }
 
-.fires::after{
-    content:" ";
-    position: absolute;
-    top:150px;
-    width:3px;
-    height:3px;
-    border-radius: 50%;
-    box-shadow: 50px 30px #fe0000, 
-    100px 80px  #fe0000,
-    80px 120px  #fe0000,
-    300px 20px  #fe0000,
-    250px 130px  #fe0000,
-    200px 50px  #fe0000,
-    150px 100px #fe0000,
-    320px 100px  #fe0000;
-}
-
-//@keyframes
-
-@keyframes anim-fire{
-    from{
-        transform: translateY(0px);
+@-webkit-keyframes pulse{
+    0%{
+        -webkit-transform: scale(1);
+        -webkit-filter: brightness(100%);
     }
-    to{
-        transform: translateY(-3850px)
+    100%{
+        -webkit-transform: scale(1.1);
+        -webkit-filter: brightness(200%);
     }
 }
 
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    100%{
+        transform: scale(1.1);
+        filter:brightness(200%);
+    }
+}
 //@MediaQuery
 
 @media(max-width: 500px){
