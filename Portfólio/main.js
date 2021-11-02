@@ -7,5 +7,7 @@ function write(elemento){
   });
 }
 
-const titulo = document.querySelector('h1');
+const titulo = document.querySelector('.animation h1');
 write(titulo);
+
+
