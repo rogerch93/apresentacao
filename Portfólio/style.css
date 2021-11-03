@@ -29,12 +29,12 @@ html{
 }
 
 .divider{
-  height: 1.5px;
+  height: 2px;
   background: linear-gradient(
     270deg,
     hsl(var(--hue), 100%, 55%, 1),
     hsl(var(--hua), 100%, 75%, 0.34)
-  )
+  );
 }
 
 /*VARIABLES===========================================>>>>>>>>>>>>>>*/
@@ -125,10 +125,15 @@ a:hover:before{
  text-align: center;
 }
 /*efects*/
-.animation{
+.card1{
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
   color: var(--text-one-color);
+  padding: 1rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--two-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
 }
 
 h1::after{
@@ -148,14 +153,14 @@ h1::after{
 }
 
 #animation .image{
-  margin-top: 5rem;
+  margin-top: 2rem;
   position: relative;
 }
 
 #animation .image::before{
   content: '';
   height: 100%;
-  width: 50%;
+  width: 100%;
   background: var(--two-color);
   position: absolute;
   top: -2%;
@@ -165,7 +170,8 @@ h1::after{
 
 #animation .image img{
   position: relative;
-  
+  width: 100%;
+  height: auto;
 }
 
 #animation .image img,
@@ -174,6 +180,88 @@ h1::after{
 }
 
 #animation .animation .programing{
-  float: left;
   border-radius: 0rem 1rem 1rem 0rem;
+}
+
+#animation .animation h1{
+  background-color: var(--text-one-color);
+  color: var(--neutral-color);
+  padding: 2rem;
+}
+
+#animation .card{
+  padding: 1rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--two-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.button{
+  background-color: var(--two-color);
+  color:var(--neutral-color);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 700 1rem 'Zen Antique',sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover{
+  background: var(--par-one-color);
+}
+
+.whatbtn{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/*ABOUT===========================================>>>>>>>>>>>>>>*/
+#about .perfil{
+  margin-top: 2rem;
+  position: relative;
+}
+
+#about .perfil::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--two-color);
+  position: absolute;
+  top: -2%;
+  left: 2%;
+  z-index: 0;
+}
+
+#about .perfil img{
+  position: relative;
+  width: 100%;
+}
+
+#about .perfil img,
+#about .perfil::before{
+  border-radius: 0rem 1rem 1rem 1rem;
+}
+
+#about .perfiltion .programing{
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.perfil{
+ width: 100%;
+ height: auto; 
+}
+
+#about .title{
+  color: var(--par-two-color);
+}
+
+#about .card{
+  padding: 1rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--two-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
 }
