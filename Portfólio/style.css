@@ -4,31 +4,30 @@
   padding: 0;
   box-sizing: border-box;
 }
-a{
+a {
   text-decoration: none;
   position: relative;
 }
 /*BASE===========================================>>>>>>>>>>>>>>*/
-body{
+body {
   font: 400 1rem 'Zen Antique', sans-serif;
   background: var(--body-ini-color);
-
 }
 
-.grid{
+.grid {
   display: grid;
-  gap: 2rem
+  gap: 2rem;
 }
 
-section{
+section {
   margin: 2rem;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.divider{
+.divider {
   height: 2px;
   background: linear-gradient(
     270deg,
@@ -38,7 +37,7 @@ html{
 }
 
 /*VARIABLES===========================================>>>>>>>>>>>>>>*/
-:root{
+:root {
   /*COLOR*/
   --hue: 262;
   --hua: 194;
@@ -47,60 +46,130 @@ html{
   --one-color: hsl(var(--hue) 100% 28%);
   --two-color: hsl(var(--hue) 100% 55%);
   --neutral-color: hsl(var(--hue) 100% 100%);
-  --par-one-color: hsl(var(--hua)100% 72%);
-  --par-two-color: hsl(var(--hua)100%
-  60%);
-  --text-one-color: hsl(var(--hua)0% 0%);
-  --text-two-color: hsl(var(--hua)0% 86%);
-  --body-ini-color: hsl(var(--hub)0% 94%);
-
+  --par-one-color: hsl(var(--hua) 100% 72%);
+  --par-two-color: hsl(var(--hua) 100% 60%);
+  --text-one-color: hsl(var(--hua) 0% 0%);
+  --text-two-color: hsl(var(--hua) 0% 86%);
+  --body-ini-color: hsl(var(--hub) 0% 94%);
 }
 
 /*BAR NAVEGATION===========================================>>>>>>>>>>>>>>*/
-#navigation{
+#navigation {
+  background: var(--one-color);
+}
+#me {
   background: var(--one-color);
 }
 
-#navigation.container{
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+#navigation.container {
+  position: relative;
+  width: 3.75rem;
+  margin: 3.125rem;
 }
 
-#navigation ul{
+#btn-mobile {
+  display: none;
+  color: var(--par-two-color);
+  font: 700 1.2rem 'Zen Antique', sans-serif;
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: var(--one-color);
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+    color: var(--par-one-color);
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--par-one-color);
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger{
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before{
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after{
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+#navigation ul {
   text-align: center;
 }
 
-#navigation ul li{
+#navigation ul li {
   display: inline-flex;
   margin: 1rem;
 }
 
-.logo{
+.logo {
   font: 700 1.21rem 'Robot', sans-serif;
   padding: 1rem;
   font-size: 2rem;
-  color:var(--neutral-color);
-}
-
-.logo span{
-  color:var(--par-one-color);
-}
-
-.link{
   color: var(--neutral-color);
-  font: 700 1.2rem 'Zen Antique',sans-serif;
+}
+
+.logo span {
+  color: var(--par-one-color);
+}
+
+.link {
+  color: var(--neutral-color);
+  font: 700 1.2rem 'Zen Antique', sans-serif;
   padding: 1.2rem;
 }
 
-i{
-  font-size: 2.0rem;
+i {
+  font-size: 2rem;
   margin: 0.5rem;
   color: var(--par-two-color);
 }
 
 /*Efects*/
-.link:before{
-  content:"";
+.link:before {
+  content: '';
   position: absolute;
   width: 100%;
   height: 3px;
@@ -114,18 +183,18 @@ i{
   transition: all 0.3s ease-in-out 0s;
 }
 
-a:hover:before{
+a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
 /*ANIMATION===========================================>>>>>>>>>>>>>>*/
-.animation{
- text-align: center;
+.animation {
+  text-align: center;
 }
 /*efects*/
-.card1{
+.card1 {
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
   color: var(--text-one-color);
@@ -136,28 +205,29 @@ a:hover:before{
   text-align: center;
 }
 
-h1::after{
+h1::after {
   content: '|';
   margin-left: 5px;
   opacity: 1;
-  animation: blink .7s infinite;
+  animation: blink 0.7s infinite;
 }
 
-@keyframes blink{
-  0%, 100%{
+@keyframes blink {
+  0%,
+  100% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0;
   }
 }
 
-#animation .image{
+#animation .image {
   margin-top: 2rem;
   position: relative;
 }
 
-#animation .image::before{
+#animation .image::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -168,28 +238,28 @@ h1::after{
   z-index: 0;
 }
 
-#animation .image img{
+#animation .image img {
   position: relative;
   width: 100%;
   height: auto;
 }
 
 #animation .image img,
-#animation .image::before{
+#animation .image::before {
   border-radius: 0rem 1rem 1rem 1rem;
 }
 
-#animation .animation .programing{
+#animation .animation .programing {
   border-radius: 0rem 1rem 1rem 0rem;
 }
 
-#animation .animation h1{
+#animation .animation h1 {
   background-color: var(--text-one-color);
   color: var(--neutral-color);
   padding: 2rem;
 }
 
-#animation .card{
+#animation .card {
   padding: 1rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--two-color);
@@ -197,34 +267,34 @@ h1::after{
   text-align: center;
 }
 
-.button{
+.button {
   background-color: var(--two-color);
-  color:var(--neutral-color);
+  color: var(--neutral-color);
   height: 3.5rem;
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 700 1rem 'Zen Antique',sans-serif;
+  font: 700 1rem 'Zen Antique', sans-serif;
   transition: background 0.3s;
 }
 
-.button:hover{
+.button:hover {
   background: var(--par-one-color);
 }
 
-.whatbtn{
+.whatbtn {
   margin-top: 2rem;
   text-align: center;
 }
 
 /*ABOUT===========================================>>>>>>>>>>>>>>*/
-#about .perfil{
+#about .perfil {
   margin-top: 2rem;
   position: relative;
 }
 
-#about .perfil::before{
+#about .perfil::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -235,30 +305,30 @@ h1::after{
   z-index: 0;
 }
 
-#about .perfil img{
+#about .perfil img {
   position: relative;
   width: 100%;
 }
 
 #about .perfil img,
-#about .perfil::before{
+#about .perfil::before {
   border-radius: 0rem 1rem 1rem 1rem;
 }
 
-#about .perfiltion .programing{
+#about .perfiltion .programing {
   border-radius: 0rem 1rem 1rem 0rem;
 }
 
-.perfil{
- width: 100%;
- height: auto; 
+.perfil {
+  width: 100%;
+  height: auto;
 }
 
-#about .title{
+#about .title {
   color: var(--par-two-color);
 }
 
-#about .card{
+#about .card {
   padding: 1rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--two-color);
