@@ -1,3 +1,6 @@
+
+
+
 /*efeito de escrita automatica*/
 function write(elemento){
   const textoArray = elemento.innerHTML.split('');
@@ -19,3 +22,14 @@ function toggleMenu(){
 }
 
 btnMobile.addEventListener('click', toggleMenu);
+
+/*swipper paralax*/
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  mousewheel: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});

@@ -337,3 +337,13 @@ h1::after {
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
+
+/*TECH===========================================>>>>>>>>>>>>>>*/
+
+/*swiper*/
+.swiper{
+ width: auto;
+ height: auto;
+}
+
+
