@@ -16,7 +16,7 @@ body {
 
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 section {
@@ -33,6 +33,15 @@ html {
     270deg,
     hsl(var(--hue), 100%, 55%, 1),
     hsl(var(--hua), 100%, 75%, 0.34)
+  );
+}
+
+.divider-invert {
+  height: 2px;
+  background: linear-gradient(
+    270deg,
+    hsl(var(--hua), 100%, 55%, 0.34),
+    hsl(var(--hue), 100%, 75%, 1)
   );
 }
 
@@ -344,6 +353,17 @@ h1::after {
 .swiper{
  width: auto;
  height: auto;
+ 
+}
+.parallax-bg{
+  background-image: url(assets/img/imgProjeto);
+  width: 47rem;
+  height: 20rem;
 }
 
+#tech .title{
+  color: var(--par-two-color);
+  padding: 1rem;
+  font:700 1.5rem 'Zen Antique', sans-serif;
+}
 
