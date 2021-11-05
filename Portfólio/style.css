@@ -16,7 +16,7 @@ body {
 
 .grid {
   display: grid;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
 section {
@@ -290,7 +290,7 @@ h1::after {
   font: 700 1rem 'Zen Antique', sans-serif;
   transition: background 0.3s;
 }
-#animation .card .button:hover{
+#animation .card .button:hover {
   background: var(--par-one-color);
 }
 
@@ -350,20 +350,40 @@ h1::after {
 /*TECH===========================================>>>>>>>>>>>>>>*/
 
 /*swiper*/
-.swiper{
- width: auto;
- height: auto;
- 
+.swiper {
+  width: auto;
+  height: auto;
 }
-.parallax-bg{
+.swiper-wrapper {
+  padding-bottom: 3rem;
+}
+
+span.swiper-pagination-bullet-active {
+  background: var(--two-color);
+}
+
+.parallax-bg {
   background-image: url(assets/img/imgProjeto);
   width: 47rem;
   height: 20rem;
 }
 
-#tech .title{
+#tech .title {
   color: var(--par-two-color);
   padding: 1rem;
-  font:700 1.5rem 'Zen Antique', sans-serif;
+  font: 700 1.5rem 'Zen Antique', sans-serif;
 }
 
+#tech .subtitle {
+  font: 700 1.5rem 'Zen Antique', sans-serif;
+  padding: 1rem;
+  color: var(--par-two-color);
+}
+
+#tech p{
+  font: 400 1rem 'Zen Antique', sans-serif;
+}
+
+#tech .imgicons {
+  height: 5rem;
+}
