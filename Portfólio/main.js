@@ -19,6 +19,17 @@ function toggleMenu(event) {
   nav.classList.toggle('active')
 }
 
+/*botao para voltar ao topo */
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function(){
+  if(this.scrollY >= 500){
+    backToTopButton.classList.add('show')
+  }
+  else{
+    backToTopButton.classList.remove('show')
+  }
+})
+
 btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart',toggleMenu)
 
