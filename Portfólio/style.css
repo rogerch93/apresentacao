@@ -412,5 +412,18 @@ span.swiper-pagination-bullet-active {
   
 }
 
-#interest.swiper-slide{
- 
+.footer{
+  text-align: center;
+  color: var(--neutral-color);
+  font: 700 1rem 'Zen Antique', sans-serif;
+  background: var(--one-color);
+  height: 4rem;
+}
+
+.footer p{
+ padding: 1.5rem;
+}
+
+.footer p span{
+  color: var(--par-one-color);
+}
