@@ -1,36 +1,53 @@
-
-
-
 /*efeito de escrita automatica*/
-function write(elemento){
-  const textoArray = elemento.innerHTML.split('');
-  elemento.innerHTML = '';
-  textoArray.forEach((letra,i) =>{
-    setTimeout(() => elemento.innerHTML += letra , 75 *i);
-  });
+function write(elemento) {
+  const textoArray = elemento.innerHTML.split('')
+  elemento.innerHTML = ''
+  textoArray.forEach((letra, i) => {
+    setTimeout(() => (elemento.innerHTML += letra), 75 * i)
+  })
 }
 
-const titulo = document.querySelector('.card1 h1');
-write(titulo);
+const titulo = document.querySelector('.card1 h1')
+write(titulo)
 
 /*botao do menu*/
-const btnMobile = document.getElementById('btn-mobile');
+const btnMobile = document.getElementById('btn-mobile')
 
-function toggleMenu(){
-  const nav = document.getElementById('nav');
+function toggleMenu(event) {
+  if(event.type ==='touchstart') event.preventDefault()
+  const nav = document.getElementById('nav')
   nav.classList.toggle('active')
 }
 
-btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('click', toggleMenu)
+btnMobile.addEventListener('touchstart',toggleMenu)
 
 /*swipper paralax*/
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   direction: 'horizontal',
   mousewheel: true,
-  // If we need pagination
+
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination'
   },
+
+  autoplay:{
+    delay: 3000,
+  },
+
   parallax: true,
+
+});
+
+const swiperCubo = new Swiper('.swiper-container',{
+  effect: 'cube',
+  cubeEffect: {
+    slideShadows: false,
+  },
+  direction: 'horizontal',
+  mousewheel: true,
+
+  autoplay:{
+    delay: 3500,
+  },
 });

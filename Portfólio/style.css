@@ -358,6 +358,7 @@ h1::after {
   padding-bottom: 3rem;
 }
 
+
 span.swiper-pagination-bullet-active {
   background: var(--two-color);
 }
@@ -387,3 +388,29 @@ span.swiper-pagination-bullet-active {
 #tech .imgicons {
   height: 5rem;
 }
+
+/*INTEREST===========================================>>>>>>>>>>>>>>*/
+#interest .imgicons{
+  height: 10rem;
+  
+}
+
+#interest .title{
+  color: var(--par-two-color);
+  padding: 1rem;
+  font: 700 1.5rem 'Zen Antique', sans-serif;
+}
+
+#interest p{
+  font: 400 1rem 'Zen Antique', sans-serif;
+  padding-top: 3rem;
+}
+
+.cubo{
+  background: black;
+  padding: 2rem;
+  
+}
+
+#interest.swiper-slide{
+ 
