@@ -3,32 +3,44 @@ function write(elemento) {
   const textoArray = elemento.innerHTML.split('')
   elemento.innerHTML = ''
   textoArray.forEach((letra, i) => {
-    setTimeout(() => (elemento.innerHTML += letra), 75 * i)
-  })
+    setTimeout(() => (elemento.innerHTML += letra), 75 * i);
+  });
 }
 
-const titulo = document.querySelector('.card1 h1')
+const titulo = document.querySelector('.card1 h1');
 write(titulo)
 
 /*botao do menu*/
-const btnMobile = document.getElementById('btn-mobile')
+const btnMobile = document.getElementById('btn-mobile');
+
 
 function toggleMenu(event) {
-  if(event.type ==='touchstart') event.preventDefault()
-  const nav = document.getElementById('nav')
-  nav.classList.toggle('active')
-}
+  if(event.type ==='touchstart') event.preventDefault();
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');
+};
+
+/*remover menu ao clicar em algum link */
+const closeMenu = document.querySelectorAll('nav ul li a');
+
+for (const close of closeMenu){
+  close.addEventListener('click', function(){
+    nav.classList.toggle('active');
+  });
+};
+
+
 
 /*botao para voltar ao topo */
-const backToTopButton = document.querySelector('.back-to-top')
+const backToTopButton = document.querySelector('.back-to-top');
 window.addEventListener('scroll', function(){
   if(this.scrollY >= 500){
-    backToTopButton.classList.add('show')
+    backToTopButton.classList.add('show');
   }
   else{
-    backToTopButton.classList.remove('show')
+    backToTopButton.classList.remove('show');
   }
-})
+});
 
 btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart',toggleMenu)
@@ -62,3 +74,41 @@ const swiperCubo = new Swiper('.swiper-container',{
     delay: 3500,
   },
 });
+
+/*evitar que uma funcao de scroll seja usa constantemente*/
+const debounce =  function(func, wait, immediate){
+  let timeout
+  return function(...args){
+    const context = this;
+    const later = function(){
+      timeout = null;
+      if(!immediate) func.apply(context,args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if(callNow) func.apply(context, args);
+  };
+};
+
+/*logica de animacao scroll */
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
+
+function animeScroll(){
+  const windowTop = window.scrollY + 100;
+  target.forEach(function(element){
+    if((windowTop) > element.scrollTop){
+      element.classList.add(animationClass)
+    }
+  });
+};
+
+animeScroll();
+
+if(target.length){
+  window.addEventListener('scroll',debounce(function(){
+    animeScroll();
+    console.log("adq");
+  }, 200));
+};

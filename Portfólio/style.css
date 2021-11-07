@@ -9,9 +9,12 @@ a {
   position: relative;
 }
 /*BASE===========================================>>>>>>>>>>>>>>*/
+
+
 body {
   font: 400 1rem 'Zen Antique', sans-serif;
   background: var(--body-ini-color);
+  line-height: 1.8rem;
 }
 
 .grid {
@@ -156,7 +159,7 @@ html {
   #nav.active #hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
-  }
+  } 
 }
 
 #navigation ul {
@@ -465,4 +468,27 @@ span.swiper-pagination-bullet-active {
 
 .back-to-top i{
   color: var(--two-color);
+}
+
+/*animação*/
+[data-anime]{
+  opacity: 0;
+  transition: .5s;
+}
+
+[data-anime="left"]{
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="rigth"]{
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"]{
+  transform: translate3d(0px, -50px, 0);
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }
