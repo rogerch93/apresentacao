@@ -22,10 +22,7 @@ body {
 }
 
 section {
-  margin-left: 10rem;
-  margin-right: 10rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+ margin: 2.5rem
 }
 
 html {
@@ -292,24 +289,9 @@ h1::after {
   text-align: center;
 }
 
-#animation .card .button {
-  background-color: var(--two-color);
-  color: var(--neutral-color);
-  height: 3.5rem;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 2rem;
-  border-radius: 0.25rem;
-  font: 700 1rem 'Zen Antique', sans-serif;
-  transition: background 0.3s;
-}
+
 #animation .card .button:hover {
   background: var(--par-one-color);
-}
-
-.whatbtn {
-  margin-top: 2rem;
-  text-align: center;
 }
 
 /*ABOUT===========================================>>>>>>>>>>>>>>*/
@@ -447,6 +429,23 @@ span.swiper-pagination-bullet-active {
   transform: translate3d(0px, 0px, 0px);
 }
 
+.whatbtn {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.card .button {
+  background-color: var(--two-color);
+  color: var(--neutral-color);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 700 1rem 'Zen Antique', sans-serif;
+  transition: background 0.3s;
+}
+
 /*FOOTER===========================================>>>>>>>>>>>>>>*/
 .footer {
   text-align: center;
@@ -494,6 +493,13 @@ span.swiper-pagination-bullet-active {
 @media (min-width: 1200px) {
 
   /*ajustando menu para desktop*/
+  section {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   #menu {
     display: block;
     position: absolute;
@@ -578,10 +584,63 @@ span.swiper-pagination-bullet-active {
   }
 
   .parallax-bg {
-    background-image: url();
+    background-image: url(https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 20rem;
+    width: 100rem;
+    height: 25rem;
+  }
+
+  .swiper-cube{
+    width: 40%;
+    display: inline-block;
+    margin-top: 3rem;
+  }
+
+  .footer {
+    text-align: center;
+    color: var(--neutral-color);
+    font: 700 1rem 'Zen Antique', sans-serif;
+    background: var(--one-color);
+    height: 4.2rem;
+  }
+  
+  .logo-footer {
+    padding: 1.5rem;
+    color: var(--neutral-color);
+  }
+  
+  .logo-footer span {
+    color: var(--par-one-color);
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(
+      270deg,
+      hsl(var(--hue), 100%, 55%, 1),
+      hsl(var(--hua), 100%, 75%, 0.34)
+    );
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .divider-invert {
+    height: 1px;
+    background: linear-gradient(
+      270deg,
+      hsl(var(--hua), 100%, 55%, 0.34),
+      hsl(var(--hue), 100%, 75%, 1)
+    );
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
