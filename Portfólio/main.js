@@ -96,9 +96,9 @@ btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart', toggleMenu)
 
 function toggleMenu(event) {
-  if (event.type === 'touchstart') event.preventDefault()
+  if (event.type == 'touchstart') event.preventDefault()
   const navBtn = document.getElementById('nav')
-  navBtn.classList.toggle('active')
+  navBtn.classList.toggle('actives')
 }
 
 /*remover menu ao clicar em algum link */
@@ -106,7 +106,7 @@ const closeMenu = document.querySelectorAll('nav ul li a')
 
 for (const close of closeMenu) {
   close.addEventListener('click', function () {
-    nav.classList.toggle('active')
+    nav.classList.toggle('actives')
   })
 }
 
@@ -116,7 +116,7 @@ if (window.matchMedia('(min-width:1200px)').matches) {
 
   for (const closeDesktop of desktop) {
     closeDesktop.addEventListener('click', function () {
-      nav.classList.remove('active')
+      nav.classList.remove('actives')
     })
   }
 }

@@ -22,7 +22,10 @@ body {
 }
 
 section {
-  margin: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 html {
@@ -108,7 +111,7 @@ html {
   overflow-y: hidden;
 }
 
-#nav.active #menu {
+#nav.actives #menu {
   height: calc(100vh - 70px);
   visibility: visible;
   overflow-y: auto;
@@ -144,14 +147,14 @@ html {
   position: relative;
 }
 
-#nav.active #hamburger {
+#nav.actives #hamburger {
   border-top-color: transparent;
 }
 
-#nav.active #hamburger::before {
+#nav.actives #hamburger::before {
   transform: rotate(135deg);
 }
-#nav.active #hamburger::after {
+#nav.actives #hamburger::after {
   transform: rotate(-135deg);
   top: -7px;
 }
@@ -345,8 +348,9 @@ h1::after {
   height: auto;
 }
 
-#about .title {
+#about .title-sobre {
   color: var(--par-two-color);
+  padding: 2rem;
 }
 
 #about .card {
@@ -374,6 +378,7 @@ span.swiper-pagination-bullet-active {
 
 .parallax-bg {
   background-image: url(assets/img/imgProjeto);
+  background-repeat: no-repeat;
   width: 47rem;
   height: 20rem;
 }
@@ -488,7 +493,7 @@ span.swiper-pagination-bullet-active {
 
 @media (min-width: 1200px) {
 
-
+  /*ajustando menu para desktop*/
   #menu {
     display: block;
     position: absolute;
@@ -525,7 +530,59 @@ span.swiper-pagination-bullet-active {
   #navigation ul {
     text-align: center;
     margin-top: 3rem;
-  } 
+  }
+
+  .textjs{
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  /*ajuste de conteudo js e img*/
+  #animation h1{
+    margin-top: 5rem;
+  }
+
+  #animation .image img{
+    width: 90%;
+  }
+
+  #animation .image::before {
+    content: '';
+    height: 100%;
+    width: 90%;
+    background: var(--two-color);
+    position: absolute;
+    top: -3%;
+    left: 7%;
+    z-index: 0;
+  }
+
+  .sobre{
+    grid-auto-flow: column;
+  }
+
+  #about .perfil {
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  #about .perfil::before {
+    content: '';
+    height: 74%;
+    width: 100%;
+    background: var(--two-color);
+    position: absolute;
+    top: -2%;
+    left: 2%;
+    z-index: 0;
+  }
+
+  .parallax-bg {
+    background-image: url();
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20rem;
+  }
 }
 
 @media (min-width: 992px) {
