@@ -22,7 +22,7 @@ body {
 }
 
 section {
- margin: 2.5rem
+ margin: 15%
 }
 
 html {
@@ -82,11 +82,7 @@ html {
   display: flex;
 }
 
-#navigation.container {
-  position: relative;
-  width: 3.75rem;
-  margin: 3.125rem;
-}
+
 
 #btn-mobile {
   display: none;
@@ -129,7 +125,8 @@ html {
   width: 20px;
   color: var(--par-one-color);
   margin-top: 1.2rem;
-  margin-left: 4rem;
+  position: absolute;
+  margin-left: 1.6rem;
 }
 
 #hamburger::after,
@@ -490,7 +487,8 @@ span.swiper-pagination-bullet-active {
   color: var(--two-color);
 }
 
-@media (min-width: 1200px) {
+
+@media (min-width: 1200px){
 
   /*ajustando menu para desktop*/
   section {
@@ -540,12 +538,17 @@ span.swiper-pagination-bullet-active {
 
   .textjs{
     grid-auto-flow: column;
-    justify-content: space-between;
+   position:static
   }
 
   /*ajuste de conteudo js e img*/
   #animation h1{
     margin-top: 5rem;
+  }
+  
+  #animation image{
+    display: flex;
+    justify-content: flex-end;
   }
 
   #animation .image img{
@@ -596,6 +599,7 @@ span.swiper-pagination-bullet-active {
     margin-top: 3rem;
   }
 
+
   .footer {
     text-align: center;
     color: var(--neutral-color);
@@ -642,7 +646,4 @@ span.swiper-pagination-bullet-active {
     justify-content: center;
     align-items: center;
   }
-}
-
-@media (min-width: 992px) {
 }
